@@ -1,0 +1,32 @@
+/*pre-made flex*/
+@mixin flex($wrapOrNot,$justify,$alignI) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrapOrNot;
+    justify-content: $justify;
+    align-items: $alignI;
+}
+
+
+@mixin parallax-effect($bg-image,$image-height) {
+  /* The image used */
+  background-image: url($bg-image);
+
+  /* Set a specific height */
+  min-height: $image-height; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin svg-color($color){
+  svg {
+    &:hover {
+        fill: $color;
+    }
+}
+}
+
